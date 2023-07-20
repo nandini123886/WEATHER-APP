@@ -16,13 +16,13 @@ app.set('view engine','hbs');
 app.use(express.static(static_path));
 
 app.get('/',(req,res)=>{
-    res.render('index')
+    res.render('index.hbs')
 })
 app.get('/about',(req,res)=>{
-    res.render('about')
+    res.render('about.hbs')
 })
 app.get('/weather',(req,res)=>{
-    res.render("weather")
+    res.render("weather.hbs")
 })
 app.get('*',(req,res)=>{
     res.render("404error",{
